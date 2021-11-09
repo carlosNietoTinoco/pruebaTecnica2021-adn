@@ -19,7 +19,7 @@ export class AdnService {
     return this.http.get<Estadisticas>(path);
   }
 
-  getAll() {
+  getAll(){
     const path = `${this.api}/all/`;
     return this.http.get<Pruebas[]>(path);
   }
