@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Data
 @Entity
 @NoArgsConstructor
-@SequenceGenerator(name = "result_description_gen", sequenceName = "result_description_gen",  initialValue = 0)
+@SequenceGenerator(name = "result_description_gen", sequenceName = "result_description_gen",  initialValue = 1)
 @Table(name ="result_description")
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,

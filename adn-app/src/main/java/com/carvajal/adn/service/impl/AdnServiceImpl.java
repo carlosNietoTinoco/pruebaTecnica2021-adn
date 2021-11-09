@@ -50,7 +50,7 @@ public class AdnServiceImpl implements AdnService {
     @Override
     public EstadisticasDTO generarEstadisticas() {
         Iterable<Result> results = resultRepository.findAll();
-        int resultadoDefectuoso = 0;
+        int resultadoDefectuoso = ResultDescription.DEFECT_DNA;
         int correctos = 0;
         int defectuosos = 0;
         for (Result result:results){
@@ -62,8 +62,6 @@ public class AdnServiceImpl implements AdnService {
         EstadisticasDTO estadisticasDTO = new EstadisticasDTO();
         estadisticasDTO.setCount_correct_dna(correctos);
         estadisticasDTO.setCount_defect_dna(defectuosos);
-        System.out.println("valor de correctos" + correctos);
-        System.out.println("valor de defectuosos" + defectuosos);
         if (defectuosos > 0)
             estadisticasDTO.setRatio((float)correctos/(float)defectuosos);
         else
@@ -78,9 +76,9 @@ public class AdnServiceImpl implements AdnService {
         Result result = new Result();
         ResultDescription resultDescription;
         if (contieneMalformacionesGeneticas)
-            resultDescription = resultDescriptionRepository.findById(0).get();
+            resultDescription = resultDescriptionRepository.findById(ResultDescription.DEFECT_DNA).get();
         else
-            resultDescription = resultDescriptionRepository.findById(1).get();
+            resultDescription = resultDescriptionRepository.findById(ResultDescription.CORRECT_DNA).get();
         result.setResultDescription(resultDescription);
         GraphString graphString = new GraphString();
         graphString.setDna(Arrays.asList(adnDTO.getDna()));

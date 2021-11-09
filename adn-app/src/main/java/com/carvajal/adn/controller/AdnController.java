@@ -19,7 +19,6 @@ public class AdnController {
 
     @PostMapping("/procesar")
     public ResponseEntity<?> procesarAdn(@RequestBody AdnDTO adnDTO){
-        //try {
             String esUnaSecuenciaValida = adnService.esUnaSecuenciaValida(adnDTO);
             if (!esUnaSecuenciaValida.equals(adnService.SUCCES))
                 return new ResponseEntity<>(
@@ -28,10 +27,6 @@ public class AdnController {
             return new ResponseEntity<>(
                     adnService.procesarAdn(adnDTO),
                     HttpStatus.OK);
-        /*} catch (Exception e) {
-            printError(e);
-            return errorResponse();
-        }*/
     }
 
     @GetMapping("/all")

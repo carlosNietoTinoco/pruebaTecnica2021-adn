@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="1" author="Wojtek">
+        <sqlFile path="01_init_graph_string.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Create table with graph_string info</comment>
+    </changeSet>
+
+    <changeSet id="2" author="Wojtek">
+        <sqlFile path="02_init_result_description.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Create table with result_description info</comment>
+    </changeSet>
+
+    <changeSet id="3" author="Wojtek">
+        <sqlFile path="03_init_result.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>ACreate table with result info</comment>
+    </changeSet>
+
+    <changeSet id="4" author="Wojtek">
+        <sqlFile path="04_result_description_insert.sql"
+                 relativeToChangelogFile="true"
+                 splitStatements="true"
+                 stripComments="true"/>
+
+        <comment>Insert status column to result_description table</comment>
+    </changeSet>
+
+</databaseChangeLog>
+
