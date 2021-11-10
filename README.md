@@ -58,7 +58,7 @@ Ahora ejecute la aplicación Java, para esto debe abrir una terminal y dirigirse
 $ mvn clean package
 $ mvn spring-boot:run
 ```
-Luego de finalizado este proceso ya puede realizar peticiones al backend de la aplicación, para esto puede usar la colección de postman que se encuentra en **url**.
+Luego de finalizado este proceso ya puede realizar peticiones al backend de la aplicación, para esto puede usar la colección de postman que se encuentra en **https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/assets/API-REST%20Prueba%20tecnica.postman_collection.json**.
 
 Ejecute la aplicación frondend de este proyecto abriendo una terminal y dirigiéndose a la carpeta adn-ui, una vez dentro ejecute los siguientes comandos
 
