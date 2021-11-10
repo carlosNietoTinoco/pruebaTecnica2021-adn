@@ -23,7 +23,7 @@ Para ejecutar esta aplicación, debe tener instaladas las siguientes herramienta
 
 - **PostgreSQL 12.8** u otra versión compatible.
 - **Apache Maven 3.6.3** u otra versión compatible.
-- **Java 11** configurado en sus variables de entorno del sistema-
+- **Java 11** configurado en sus variables de entorno del sistema.
 - **Angular CLI 13**
 - **node v17.0.1** u otra versión compatible, que según la documentación de node son; 12.20.x/14.15.x/16.10.x
 
@@ -58,7 +58,7 @@ Ahora ejecute la aplicación Java, para esto debe abrir una terminal y dirigirse
 $ mvn clean package
 $ mvn spring-boot:run
 ```
-Luego de finalizado este proceso ya puede realizar peticiones al backend de la aplicación, para esto puede usar la colección de postman incluida dentro de la carpeta assets que se encuentra en la raíz de este proyecto.
+Luego de finalizado este proceso ya puede realizar peticiones al backend de la aplicación, para esto puede usar la colección de postman que se encuentra en **url**.
 
 Ejecute la aplicación frondend de este proyecto abriendo una terminal y dirigiéndose a la carpeta adn-ui, una vez dentro ejecute los siguientes comandos
 
@@ -67,9 +67,9 @@ $ npm install
 $ ng serve
 ```
 
-- Después de esto ya podrá hacer una prueba completa de la aplicación desde cualquier navegador ingresando a **http://localhost:4200/**, para esto por favor tenga en cuenta las siguientes aclaraciones:
+Después de esto ya podrá hacer una prueba completa de la aplicación desde cualquier navegador ingresando a **http://localhost:4200/**, para esto por favor tenga en cuenta las siguientes aclaraciones:
 
-La secuencia de ADN a analizar debe cumplir con el formato especificado en la prueba técnica, esto es; comience y finalice con corchetes, divida las filas con comas, no deje espacios en blanco entre las palabras, cada fila de palabras debe abrir y cerrar con comillas. A continuación puede ver un ejemplo:
+- La secuencia de ADN a analizar debe cumplir con el formato especificado en la prueba técnica, esto es; comience y finalice con corchetes, divida las filas con comas, no deje espacios en blanco entre las palabras, cada fila de palabras debe abrir y cerrar con comillas. A continuación puede ver un ejemplo:
 
 ```
 {"ACTCTATC","CATCTTTC","ATATCTTT","GGCAGTGG","TATCAGGG","TTTTGAGG","GAATGGAC","TGGTTGCT"}
@@ -81,7 +81,7 @@ La secuencia de ADN a analizar debe cumplir con el formato especificado en la pr
 
 #### Notas
 
-Creo que a nivel algorítmico, la clase mas interesante es **https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/adn-app/src/main/java/com/carvajal/adn/service/impl/GraphServiceImpl.java**. En esta clase se implementa la búsqueda de la malformación en la matriz, por medio del método **contieneMalformacionesGeneticas**. Esta búsqueda se hace por medio de una representación de grafos, usando una búsqueda por profundidad limitada iterativa, se puede ver mas sobre este algoritmo en; **https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search**.
+Creo que a nivel algorítmico, la clase mas interesante es **https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/adn-app/src/main/java/com/carvajal/adn/service/impl/GraphServiceImpl.java**. En esta clase se implementa la búsqueda de la malformación en la matriz, por medio del método **contieneMalformacionesGeneticas**. Esta búsqueda se hace con una representación de grafos, usando una búsqueda por profundidad limitada iterativa, se puede ver mas sobre este algoritmo en; **https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search**.
 
 Algo muy interesante de esta implementación es que es de orden **O (b ^ d)**, donde **b** es el factor de ramificación y **d** es la profundidad de la meta, esto hace que para el caso en particular donde la profundidad es de 3 (profundidad máxima de exploración en el grafo), este algoritmo tenga un orden lineal, aunque en el peor de los casos este podría acercarse (sin llegar) a un orden **O (n ^ 2)**, que seria cuando el ADN este distribuido siempre en conexiones no lineales de exactamente 4 bases nitrogenadas.
 
