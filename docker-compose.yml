@@ -23,8 +23,18 @@ services:
       - POSTGRES_PASSWORD=adn_password
     ports:
       - 8080:8080
+    depends_on:
+      - "adn-postgres"
     links:
       - adn-postgres
+
+  adn-ui:
+    build: ./adn-ui
+    container_name: adn-ui
+    ports:
+      - 4200:80
+    links:
+      - adn-app
 
 
 volumes:
