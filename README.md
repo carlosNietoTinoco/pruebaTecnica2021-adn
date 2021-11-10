@@ -19,7 +19,7 @@ El punto de entrada para un usuario es un sitio web que está disponible en la d
 
 ### Requisitos previos
 
-Para ejecutar esta aplicación, debe instalar dos herramientas:
+Para ejecutar esta aplicación, debe tener instaladas las siguientes herramientas:
 
 - **PostgreSQL 12.8** u otra versión compatible.
 - **Apache Maven 3.6.3** u otra versión compatible.
