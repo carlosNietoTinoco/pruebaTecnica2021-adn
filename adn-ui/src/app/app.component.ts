@@ -45,6 +45,9 @@ export class AppComponent {
   enviarAdn() {
     let sinCorchetes = this.dnaString.replace(/["{}]/g, '');
     var filas = sinCorchetes.split(",");
+    for (var i = 0; i < filas.length; i++) {
+      filas[i]=filas[i].trim();
+    }
     this.adnService.enviarAdn(new class implements Adn {
       dna: string[]=filas;
     })
