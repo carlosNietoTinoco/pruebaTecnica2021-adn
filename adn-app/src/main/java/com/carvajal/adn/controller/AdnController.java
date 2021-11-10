@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/adn")
 @RequiredArgsConstructor
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class AdnController {
 
     @Autowired
@@ -61,4 +61,5 @@ public class AdnController {
         System.out.println("*********************************************");
         System.out.println("EROR:: " + e + " - " + e.toString());
     }
+
 }
