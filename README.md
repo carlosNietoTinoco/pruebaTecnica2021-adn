@@ -8,7 +8,7 @@ Es este Readme se especificara la forma de desplegar la aplicación que está co
 
 - Base de datos PostgreSQL
 - Backend de Java (Spring Boot)
-- Interfaz angular
+- Interfaz Angular
 
 El punto de entrada para un usuario es un sitio web que está disponible en la dirección: **http://localhost:4200/**
 
