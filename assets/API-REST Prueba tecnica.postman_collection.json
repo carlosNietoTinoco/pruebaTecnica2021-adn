@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "95c1f861-8847-4927-9448-2c73a6d50ec8",
+		"name": "API-REST Prueba tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Procesar ADN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"dna\": \n[\"ACTCTATC\",\n\"CATCTTTC\",\n\"ATATCTTT\",\n\"GGCAGTGG\",\n\"TATCAGGG\",\n\"TTTTGAGG\",\n\"GAATGGAC\",\n\"TGGTTGCT\"]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/adn/procesar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"adn",
+						"procesar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener estadisticas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/adn/estadisticas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"adn",
+						"estadisticas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener todos los ADN procesados",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/adn/all/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"adn",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
