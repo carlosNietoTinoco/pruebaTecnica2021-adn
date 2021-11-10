@@ -2,13 +2,13 @@
 
 Esta es una aplicación creada a partir de la especificación dada en la prueba técnica enviada por la empresa Carvajal.
 
-Para este proyecto se implementaron 2 versiones, una de ejecución local y una de ejecución contenerizada por medio de Docker. En este Readme se especificara la implementación local, para ver la implementación contenerizada vea la rama **docker**.
+Para este proyecto se implementaron 2 versiones, una de ejecución local y una de ejecución contenerizada por medio de Docker. En este Readme se especificara la implementación local, para ver la implementación contenerizada vea la rama [docker](https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/tree/docker).
 
 Es este Readme se especificara la forma de desplegar la aplicación en un ambiente local ejecutando de forma independiente cada uno de los componentes, los cuales son:
 
 - Base de datos PostgreSQL
 - Backend de Java (Spring Boot)
-- Interfaz angular
+- Interfaz Angular
 
 El punto de entrada para un usuario es un sitio web que está disponible en la dirección: **http://localhost:4200/**
 
@@ -50,7 +50,7 @@ postgres=# grant all privileges on database pruebaTecnicaCarvajal to prueba;
 ```
 La configuración de la base de datos para en backend puede encontrarla en el archivo: 
 
-- https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/adn-app/src/main/resources/application.properties
+- [application.properties](https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/adn-app/src/main/resources/application.properties)
 
 Ahora ejecute la aplicación Java, para esto debe abrir una terminal y dirigirse a la carpeta adn-app que esta contenida dentro de este proyecto, una vez dentro de adn-app ejecute los siguientes comandos:
 
@@ -58,7 +58,7 @@ Ahora ejecute la aplicación Java, para esto debe abrir una terminal y dirigirse
 $ mvn clean package
 $ mvn spring-boot:run
 ```
-Luego de finalizado este proceso ya puede realizar peticiones al backend de la aplicación, para esto puede usar la colección de postman que se encuentra en **https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/assets/API-REST%20Prueba%20tecnica.postman_collection.json**.
+Luego de finalizado este proceso ya puede realizar peticiones al backend de la aplicación, para esto puede usar la colección de postman que se encuentra [aqui](https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/assets/API-REST%20Prueba%20tecnica.postman_collection.json).
 
 Ejecute la aplicación frondend de este proyecto abriendo una terminal y dirigiéndose a la carpeta adn-ui, una vez dentro ejecute los siguientes comandos
 
@@ -81,7 +81,7 @@ Después de esto ya podrá hacer una prueba completa de la aplicación desde cua
 
 #### Notas
 
-Creo que a nivel algorítmico, la clase mas interesante es **https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/adn-app/src/main/java/com/carvajal/adn/service/impl/GraphServiceImpl.java**. En esta clase se implementa la búsqueda de la malformación en la matriz, por medio del método **contieneMalformacionesGeneticas**. Esta búsqueda se hace con una representación de grafos, usando una búsqueda por profundidad limitada iterativa, se puede ver mas sobre este algoritmo en; **https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search**.
+Creo que a nivel algorítmico, la clase mas interesante es [GraphServiceImpl.java](https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/adn-app/src/main/java/com/carvajal/adn/service/impl/GraphServiceImpl.java). En esta clase se implementa la búsqueda de la malformación en la matriz, por medio del método **contieneMalformacionesGeneticas**. Esta búsqueda se hace con una representación de grafos, usando una búsqueda por profundidad limitada iterativa, se puede ver mas sobre este algoritmo en; [Iterative_deepening_depth-first_search](https://en.wikipedia.org/wiki/Iterative_deepening_depth-first_search).
 
 Algo muy interesante de esta implementación es que es de orden **O (b ^ d)**, donde **b** es el factor de ramificación y **d** es la profundidad de la meta, esto hace que para el caso en particular donde la profundidad es de 3 (profundidad máxima de exploración en el grafo), este algoritmo tenga un orden lineal, aunque en el peor de los casos este podría acercarse (sin llegar) a un orden **O (n ^ 2)**, que seria cuando el ADN este distribuido siempre en conexiones no lineales de exactamente 4 bases nitrogenadas.
 
