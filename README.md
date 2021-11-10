@@ -21,7 +21,7 @@ El punto de entrada para un usuario es un sitio web que está disponible en la d
 
 Para ejecutar esta aplicación, debe instalar dos herramientas: **Docker** y **Docker Compose**.
 
-Instrucciones de cómo instalar **Docker** en [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [Windows](https://docs.docker.com/docker-for-windows/install/), [Mac](https://docs.docker.com/docker-for-mac/install/)..
+Instrucciones de cómo instalar **Docker** en [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [Windows](https://docs.docker.com/docker-for-windows/install/), [Mac](https://docs.docker.com/docker-for-mac/install/).
 
 **Docker Compose** ya está incluido en los paquetes de instalación para *Windows* y *Mac*, por lo que solo los usuarios de Ubuntu deben seguir [estas instrucciones](https://docs.docker.com/compose/install/).
 
