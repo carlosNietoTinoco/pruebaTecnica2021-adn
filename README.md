@@ -12,7 +12,7 @@ Es este Readme se especificara la forma de desplegar la aplicación en un ambien
 
 El punto de entrada para un usuario es un sitio web que está disponible en la dirección: **http://localhost:4200/**
 
-![ADN](https://github.com/wkrzywiec/kanban-board/blob/master/assets/kanban.gif)
+![ADN](https://github.com/carlosNietoTinoco/pruebaTecnica2021-adn/blob/local/assets/adn-ui.png)
 
 
 ---
