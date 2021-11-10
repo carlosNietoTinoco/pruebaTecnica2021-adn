@@ -10,22 +10,22 @@ import {Adn} from "../interfaces/adn";
 })
 export class AdnService {
 
-  private api = '/api/adn';
+  private api = '/api/';
 
   constructor(private http: HttpClient) { }
 
   getEstadisticas() {
-    const path = `${this.api}/estadisticas/`;
+    const path = `http://localhost:8080/api/adn/estadisticas/`;
     return this.http.get<Estadisticas>(path);
   }
 
-  getAll() {
-    const path = `${this.api}/all/`;
+  getAll(){
+    const path = `http://localhost:8080/api/adn/all/`;
     return this.http.get<Pruebas[]>(path);
   }
 
   enviarAdn(adn: Adn) {
-    const path = `${this.api}/procesar`;
+    const path = `http://localhost:8080/api/adn/procesar`;
     return this.http.post(path, adn);
   }
 
